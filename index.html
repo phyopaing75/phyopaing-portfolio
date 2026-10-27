@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phyo Paing | Data & Business Analytics Portfolio</title>
-<meta name="description" content="Portfolio of Phyo Paing: SQL, Excel, Python, Tableau and Power BI projects covering data cleaning, analysis, dashboards and data modeling.">
+<meta name="description" content="Portfolio of Phyo Paing: SQL (MySQL, BigQuery), Excel, Python, Tableau, Power BI and Looker Studio projects covering data cleaning, analysis, dashboards and data modeling.">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Phyo Paing | Data &amp; Business Analytics Portfolio">
-<meta property="og:description" content="SQL, Excel, Python, Tableau and Power BI projects covering data cleaning, analysis, dashboards and data modeling.">
+<meta property="og:description" content="SQL (MySQL, BigQuery), Excel, Python, Tableau, Power BI and Looker Studio projects covering data cleaning, analysis, dashboards and data modeling.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236366F1'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-size='14' font-weight='700' text-anchor='middle' fill='white'%3EPP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
   --shadow:none;
   /* same accent and tool colors in light and dark */
   --accent:#6366F1;--on-accent:#FFFFFF;
-  --sql:#0F9AA8;--excel:#2E9E5E;--python:#E0561B;--tableau:#4F6FF0;--powerbi:#CA8A04;
+  --sql:#0F9AA8;--excel:#2E9E5E;--python:#E0561B;--tableau:#4F6FF0;--powerbi:#CA8A04;--looker:#9333EA;
   --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   color-scheme:dark;
 }
@@ -108,7 +108,9 @@ section.block{padding:88px 0 0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:820px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.skills{grid-template-columns:1fr}}
 .skill h3{display:flex;align-items:center;gap:10px;font-size:1.05rem;margin-bottom:14px}
 .dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
 .skill ul{margin:0 0 18px;padding:0;list-style:none;color:var(--muted);font-size:.93rem;display:grid;gap:6px}
@@ -187,7 +189,7 @@ footer{margin-top:88px;border-top:1px solid var(--line);padding:28px 0 40px;colo
 <div>
 <span class="eyebrow">Data | Business Intelligence Analyst</span>
 <h1>Phyo Paing</h1>
-<p class="lead">I turn messy data into clear answers for business decisions, using SQL, Excel, Python, Tableau and Power BI.</p>
+<p class="lead">I turn messy data into clear answers for business decisions, using SQL, Python, Excel, Power BI, Tableau and Looker Studio.</p>
 <div class="cta">
 <a class="btn primary" href="https://raw.githubusercontent.com/phyopaing75/phyopaing-portfolio/main/Phyo%20Paing%20Resume.pdf" download="Phyo_Paing_Resume.pdf">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>Download resume</a>
@@ -216,7 +218,7 @@ footer{margin-top:88px;border-top:1px solid var(--line);padding:28px 0 40px;colo
 <div class="pillars">
 <div class="pillar"><small>01</small><b>Clean, trustworthy data</b><span>Deduplication, staging tables and imputation in SQL, plus Python pipelines.</span></div>
 <div class="pillar"><small>02</small><b>Models built to scale</b><span>A Power BI star schema with relationships, DAX measures and row-level security.</span></div>
-<div class="pillar"><small>03</small><b>Dashboards that answer questions</b><span>Interactive Excel, Tableau and Power BI reports on sales, pricing, demand and pay.</span></div>
+<div class="pillar"><small>03</small><b>Dashboards that answer questions</b><span>Interactive Excel, Tableau, Power BI and Looker Studio reports on sales, pricing, demand and pay.</span></div>
 </div>
 <ul class="timeline">
 <li><time>2026</time><div><b>MSc, Business Analytics &amp; Digital Transformation</b><span>Asian Institute of Technology</span></div></li>
@@ -257,26 +259,28 @@ footer{margin-top:88px;border-top:1px solid var(--line);padding:28px 0 40px;colo
 
 <script>
 const G="https://github.com/phyopaing75/";
-const TOOLS={SQL:"var(--sql)",Excel:"var(--excel)",Python:"var(--python)",Tableau:"var(--tableau)","Power BI":"var(--powerbi)"};
+const TOOLS={SQL:"var(--sql)",Excel:"var(--excel)",Python:"var(--python)",Tableau:"var(--tableau)","Power BI":"var(--powerbi)","Looker Studio":"var(--looker)"};
 const P=[
-{t:"Global Company Layoffs Data Cleaning & EDA",k:["SQL"],d:"Cleans messy global layoff records in MySQL using staging tables, deduplication and self-join imputation, then uses CTEs and window functions to trace layoffs by funding stage, company and year.",u:G+"global-company-layoffs-cleaning-eda-sql",i:"layoffs.png"},
-{t:"Global Covid-19 EDA",k:["SQL"],d:"Joins COVID-19 mortality and vaccination data to compare infection rates, fatality ratios and rolling vaccinations, using CTEs, temp tables and views built for BI.",u:G+"global-covid19-eda-sql",i:"covid19.jpg"},
-{t:"Coffee Sales Interactive Dashboard",k:["Excel"],d:"Turns raw multi-table coffee sales data into an executive dashboard with pivot tables, slicers and a timeline, tracking revenue, top products and loyalty program uplift.",u:G+"coffee-sales-dashboard-excel",i:"coffee_sales.jpg"},
-{t:"Bike Sales Interactive Dashboard",k:["Excel"],d:"Cleans survey data and builds customer segments, then uses pivot tables and slicers to show what drives bike purchases by income, commute distance and age.",u:G+"bike-sales-dashboard-excel",i:"bike_sales.jpg"},
-{t:"London Bike Rides Analytics",k:["Python","Tableau"],d:"A Python pipeline prepares 17,000+ bike-share and weather records for a Tableau dashboard showing how weather shifts commuter demand.",u:G+"london-bike-rides-dashboard-python-tableau",i:"bike_rides.jpg",a:["View dashboard","https://public.tableau.com/app/profile/phyo.paing8212/viz/LondonBikeRideAnalysis_17881494251050/Dashboard1"]},
-{t:"Seattle Airbnb Market Performance & Revenue",k:["Tableau"],d:"Combines 1M+ Seattle Airbnb booking, listing and calendar records in Tableau to show how nightly rates vary by zip code, bedroom count and season.",u:G+"airbnb-analysis-tableau",i:"airbnb.jpg",a:["View dashboard","https://public.tableau.com/app/profile/phyo.paing8212/viz/airbnb_analysis_17901513018730/Dashboard1"]},
+{t:"Iowa Spirits: Convenience Store Category Review",k:["SQL","Looker Studio"],d:"Analyzes 7.7M real store purchase records in BigQuery to show convenience stores' spirits share gain came only from new stores, then sizes a ≈ $4,000-per-store opportunity in growing, under-sold categories.",u:G+"iowa-retail-spirits-sales-analysis-bigquery-datastudio",i:"iowa.jpg",a:["View dashboard","https://datastudio.google.com/reporting/a1bce2d1-7fcb-4bfb-b94c-0754ac625020"]},
 {t:"Sales, Fulfilment & Marketing Data Model",k:["Power BI"],d:"Reshapes a 21-sheet Excel workbook into a multi-fact star schema with 23 relationships, row-level security and 39 DAX measures covering sales, fulfilment, inventory and campaigns.",u:G+"sales-fulfilment-marketing-data-model-powerbi",i:"sales_data_model.jpg"},
+{t:"Global Company Layoffs Data Cleaning & EDA",k:["SQL"],d:"Cleans messy global layoff records in MySQL using staging tables, deduplication and self-join imputation, then uses CTEs and window functions to trace layoffs by funding stage, company and year.",u:G+"global-company-layoffs-cleaning-eda-sql",i:"layoffs.png"},
+{t:"London Bike Rides Analytics",k:["Python","Tableau"],d:"A Python pipeline prepares 17,000+ bike-share and weather records for a Tableau dashboard showing how weather shifts commuter demand.",u:G+"london-bike-rides-dashboard-python-tableau",i:"bike_rides.jpg",a:["View dashboard","https://public.tableau.com/app/profile/phyo.paing8212/viz/LondonBikeRideAnalysis_17881494251050/Dashboard1"]},
+{t:"Top Rated IMDb Movies Analysis",k:["Power BI"],d:"Analyzes budgets and returns for 199 comparable top-rated IMDb films with Power Query and DAX, ranking genres and studios by ROI.",u:G+"top-rated-imdb-movies-dashboard-powerbi",i:"imdb.jpeg",a:["View report","https://github.com/phyopaing75/top-rated-imdb-movies-dashboard-powerbi/blob/main/ToP_movies_on_imdb_in_2026.pdf"]},
 {t:"Data Professional Survey Breakdown",k:["Power BI"],d:"Power Query and DAX turn global survey responses into a dashboard on pay, tool use and workplace sentiment, showing pay gaps, Python's lead and hurdles to entering the field.",u:G+"data-professional-survey-breakdown_dashboard-powerbi",i:"data_professional_survey.jpg",a:["View report","https://github.com/phyopaing75/data-professional-survey-breakdown_dashboard-powerbi/blob/main/Data%20Professional%20Survey%20Breakdown%20Project.pdf"]},
-{t:"Top Rated IMDb Movies Analysis",k:["Power BI"],d:"Analyzes budgets and returns for 200 top-rated IMDb films with Power Query and DAX, ranking genres and studios by ROI.",u:G+"top-rated-imdb-movies-dashboard-powerbi",i:"imdb.jpeg",a:["View report","https://github.com/phyopaing75/top-rated-imdb-movies-dashboard-powerbi/blob/main/ToP_movies_on_imdb_in_2026.pdf"]},
+{t:"Coffee Sales Interactive Dashboard",k:["Excel"],d:"Turns raw multi-table coffee sales data into an executive dashboard with pivot tables, slicers and a timeline, tracking revenue, top products and loyalty program uplift.",u:G+"coffee-sales-dashboard-excel",i:"coffee_sales.jpg"},
+{t:"Seattle Airbnb Market Performance & Revenue",k:["Tableau"],d:"Combines 1M+ Seattle Airbnb booking, listing and calendar records in Tableau to show how nightly rates vary by zip code, bedroom count and season.",u:G+"airbnb-analysis-tableau",i:"airbnb.jpg",a:["View dashboard","https://public.tableau.com/app/profile/phyo.paing8212/viz/airbnb_analysis_17901513018730/Dashboard1"]},
+{t:"Global Covid-19 EDA",k:["SQL"],d:"Joins COVID-19 mortality and vaccination data to compare infection rates, fatality ratios and rolling vaccinations, using CTEs, temp tables and views built for BI.",u:G+"global-covid19-eda-sql",i:"covid19.jpg"},
+{t:"Bike Sales Interactive Dashboard",k:["Excel"],d:"Cleans survey data and builds customer segments, then uses pivot tables and slicers to show what drives bike purchases by income, commute distance and age.",u:G+"bike-sales-dashboard-excel",i:"bike_sales.jpg"},
 {t:"Largest Companies in the US",k:["Python"],d:"Scrapes Wikipedia's 100 largest US companies by revenue with Requests and BeautifulSoup, cleans the text and exports a Pandas DataFrame to CSV.",u:G+"listing-largest-companies-in-us-python",i:"largest_companies_us.jpg"},
 {t:"Automated Amazon Price Tracker",k:["Python"],d:"Tracks Amazon product prices with Requests and BeautifulSoup, logging timestamped prices to a CSV on a schedule to build a price history.",u:G+"web-scraping-amazon-python",i:"amazon.jpg"}
 ];
 const S={
-"SQL":["Data cleaning and deduplication","CTEs and window functions","Views and temp tables","Joins"],
+"SQL":["MySQL and Google BigQuery","Data cleaning and deduplication","CTEs and window functions","Views and temp tables","Joins"],
 "Excel":["Pivot tables and slicers","Timelines and dashboards","Lookups and nested formulas","Data cleaning"],
 "Python":["Pandas","Web scraping","Requests and BeautifulSoup","Data pipelines"],
 "Tableau":["Interactive dashboards","Time brushing and parameters","Heat maps","Pricing and demand analysis"],
-"Power BI":["Power Query","DAX measures","Star schema data modeling","Row-level security","Interactive dashboards"]
+"Power BI":["Power Query","DAX measures","Star schema data modeling","Row-level security","Interactive dashboards"],
+"Looker Studio":["Dashboards connected to BigQuery","Calculated fields","Highlighting and reference lines","Data storytelling"]
 };
 
 const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
