@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phyo Paing | Data & Business Analytics Portfolio</title>
-<meta name="description" content="Portfolio of Phyo Paing: SQL (MySQL, BigQuery), Excel, Python, Tableau, Power BI and Looker Studio projects covering data cleaning, analysis, dashboards and data modeling.">
+<meta name="description" content="Portfolio of Phyo Paing: SQL (MySQL, BigQuery), Excel, Python, Tableau, Power BI and Looker Studio projects covering data cleaning, analysis, dashboards, data modeling, people analytics and a change management case study.">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0B0D12" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
@@ -22,7 +22,7 @@
   --shadow:none;
   /* same accent and tool colors in light and dark */
   --accent:#6366F1;--on-accent:#FFFFFF;
-  --sql:#0F9AA8;--excel:#2E9E5E;--python:#E0561B;--tableau:#4F6FF0;--powerbi:#CA8A04;--looker:#9333EA;
+  --sql:#0F9AA8;--excel:#2E9E5E;--python:#E0561B;--tableau:#4F6FF0;--powerbi:#CA8A04;--looker:#9333EA;--case:#E11D48;
   --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   color-scheme:dark;
 }
@@ -213,6 +213,7 @@ footer{margin-top:88px;border-top:1px solid var(--line);padding:28px 0 40px;colo
 <h3 class="about-lead">Technical background. <em>Business mindset.</em></h3>
 <div class="about-rows">
 <div><h4>Background</h4><p>I pair a <strong>computer engineering degree</strong> with an <strong>MSc in Business Analytics &amp; Digital Transformation</strong>, so I can build the data pipeline and also explain what it means for the business.</p></div>
+<div><h4>Change &amp; people</h4><p>As an IT Officer I proposed and led a <strong>paper-to-online approval rollout</strong> through weekly Kaizen meetings with department heads, so I know analysis only pays off when people adopt the change.</p></div>
 <div><h4>How I work</h4><p>I work end to end: clean the data in SQL or Python, model it, then turn it into <strong>interactive dashboards</strong> that stakeholders can explore on their own.</p></div>
 </div>
 <div class="pillars">
@@ -259,8 +260,10 @@ footer{margin-top:88px;border-top:1px solid var(--line);padding:28px 0 40px;colo
 
 <script>
 const G="https://github.com/phyopaing75/";
-const TOOLS={SQL:"var(--sql)",Excel:"var(--excel)",Python:"var(--python)",Tableau:"var(--tableau)","Power BI":"var(--powerbi)","Looker Studio":"var(--looker)"};
+const TOOLS={SQL:"var(--sql)",Excel:"var(--excel)",Python:"var(--python)",Tableau:"var(--tableau)","Power BI":"var(--powerbi)","Looker Studio":"var(--looker)","Case study":"var(--case)"};
 const P=[
+{t:"Employee Engagement Analysis: US Federal Workforce (FEVS 2024)",k:["Python","Power BI"],d:"Cleans 674K survey responses in Python, rebuilds OPM's Engagement Index (73.0, matching the published 73) and ranks 52 workplace drivers, then models 49M answers into a 540K-row star schema for a 5-page Power BI report with agency benchmarks.",u:G+"fevs-engagement-analysis-python-powerbi",i:"fevs_engagement.jpg",a:["View report",G+"fevs-engagement-analysis-python-powerbi/blob/main/outputs/fevs-engagement-analysis-dashboard.pdf"]},
+{t:"From Paper to E-Approval: Change Management Case Study",k:["Case study"],d:"How I proposed and rolled out an online payment-approval system across 11 departments and about 20 approvers, from requirements and approval flows to training and adoption. Approval time fell from half a day to under 15 minutes.",u:"case-studies/eapproval-change-management-case-study.pdf",i:"eapproval_case_study.jpg",a:["Read case study","case-studies/eapproval-change-management-case-study.pdf"]},
 {t:"Iowa Spirits: Convenience Store Category Review",k:["SQL","Looker Studio"],d:"Analyzes 7.7M real store purchase records in BigQuery to show convenience stores' spirits share gain came only from new stores, then sizes a ≈ $4,000-per-store opportunity in growing, under-sold categories.",u:G+"iowa-retail-spirits-sales-analysis-bigquery-datastudio",i:"iowa.jpg",a:["View dashboard","https://datastudio.google.com/reporting/a1bce2d1-7fcb-4bfb-b94c-0754ac625020"]},
 {t:"Sales, Fulfilment & Marketing Data Model",k:["Power BI"],d:"Reshapes a 21-sheet Excel workbook into a multi-fact star schema with 23 relationships, row-level security and 39 DAX measures covering sales, fulfilment, inventory and campaigns.",u:G+"sales-fulfilment-marketing-data-model-powerbi",i:"sales_data_model.jpg"},
 {t:"Global Company Layoffs Data Cleaning & EDA",k:["SQL"],d:"Cleans messy global layoff records in MySQL using staging tables, deduplication and self-join imputation, then uses CTEs and window functions to trace layoffs by funding stage, company and year.",u:G+"global-company-layoffs-cleaning-eda-sql",i:"layoffs.png"},
@@ -277,9 +280,9 @@ const P=[
 const S={
 "SQL":["MySQL and Google BigQuery","Data cleaning and deduplication","CTEs and window functions","Views and temp tables","Joins"],
 "Excel":["Pivot tables and slicers","Timelines and dashboards","Lookups and nested formulas","Data cleaning"],
-"Python":["Pandas","Web scraping","Requests and BeautifulSoup","Data pipelines"],
+"Python":["Pandas","Survey and statistical analysis","Web scraping","Requests and BeautifulSoup","Data pipelines"],
 "Tableau":["Interactive dashboards","Time brushing and parameters","Heat maps","Pricing and demand analysis"],
-"Power BI":["Power Query","DAX measures","Star schema data modeling","Row-level security","Interactive dashboards"],
+"Power BI":["Power Query","DAX measures","Star schema data modeling","Row-level security","Benchmarks and drill-down reports"],
 "Looker Studio":["Dashboards connected to BigQuery","Calculated fields","Highlighting and reference lines","Data storytelling"]
 };
 
